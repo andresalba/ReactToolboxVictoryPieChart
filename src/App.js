@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { VictoryPie } from 'victory-pie';
+
+const grades = [{x: "Right", y: 7}, {x: "Wrong", y: 3}]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Victory Pie Chart</h1>
+      <div className="Pie">
+      <VictoryPie 
+        data ={grades}
+        colorScale={["#00ccff", "#CC00FF"]}
+        radius={100}
+      />
+      </div>
     </div>
   );
 }
